@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Logo from "../Assets/Logo.svg";
 import { BsCart2 } from "react-icons/bs"
 import { HiOutlineBars3 } from "react-icons/hi2";
@@ -53,11 +53,12 @@ const Navbar = () => {
         <a href="">Testimonials</a>
         <a href="">Contact</a>
         <a href="">
-          <BsCart2 className='navbar-cart-icon'/>
+          <BsCart2 className="navbar-cart-icon" />
         </a>
-        <button className='primary-button'>
-          Bookings Now
-        </button>
+        <button className="primary-button">Bookings Now</button>
+      </div>
+      <div className="navbar-menu-container">
+        <HiOutlineBars3 onClick={() => setOpenMenu(true)} />
       </div>
     </nav>
   )
