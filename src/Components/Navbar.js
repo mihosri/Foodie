@@ -60,6 +60,13 @@ const Navbar = () => {
       <div className="navbar-menu-container">
         <HiOutlineBars3 onClick={() => setOpenMenu(true)} />
       </div>
+      <Drawer open={openMenu} onClose={() => setOpenMenu(false)} anchor='right'>
+        <Box sx={{width: 250}}
+          role="presentation"
+          onClick={() => setOpenMenu(false)}
+          onKeyDown={()=> setOpenMenu(false)}
+        ></Box>
+      </Drawer>
     </nav>
   )
 }
